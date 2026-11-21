@@ -1,0 +1,36 @@
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light dark;
+  --bg: #f7f5f0;
+  --fg: #1d1b18;
+  --card: #ffffff;
+  --border: #ddd6c8;
+  --accent: #7a4b1e;
+  --error: #b3261e;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171512;
+    --fg: #ece7dd;
+    --card: #221f1a;
+    --border: #3a342b;
+    --accent: #d9a066;
+    --error: #f2b8b5;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); }
+.container { max-width: 420px; margin: 0 auto; padding: 32px 16px; }
+h1 { text-align: center; }
+.card {
+  display: flex; flex-direction: column; gap: 12px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px;
+}
+.card h2 { margin: 0 0 4px; }
+input, button { font: inherit; padding: 12px; border-radius: 8px; }
+input { border: 1px solid var(--border); background: var(--bg); color: var(--fg); }
+button { border: none; background: var(--accent); color: #fff; cursor: pointer; }
+button:disabled { opacity: 0.6; }
+button.link { background: none; color: var(--accent); padding: 4px; }
+.error { color: var(--error); margin: 0; }
